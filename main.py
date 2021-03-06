@@ -6,9 +6,9 @@ from fizzbuzz_designations import FizzBuzz
 
 
 def  main():
-    fizzbuzz_tuple = FizzBuzz.get_fizzbuzz(FizzBuzz.get_fizz())
+    fizzbuzz_tuple = FizzBuzz.get_fizzbuzz_attributes(FizzBuzz.get_fizz())
 
-    print(f'fizz is {fizzbuzz_tuple.fizz}, buzz is {fizzbuzz_tuple.buzz}, fizzbuzz is {fizzbuzz_tuple.fizzbuzz}')
+    print(f'fizz is {fizzbuzz_tuple.fizz}, buzz is {fizzbuzz_tuple.buzz}, fizzbuzz is {fizzbuzz_tuple.fizzbuzz}, fizz * buzz is {fizzbuzz_tuple.fizz_x_buzz}')
 
 
 

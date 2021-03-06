@@ -16,12 +16,12 @@ class FizzBuzz:
         return fizz, buzz
 
 
-    def get_fizzbuzz(fizz_buzz):
+    def get_fizzbuzz_attributes(fizz_buzz):
         fizzbuzz = fizz_buzz[0] + fizz_buzz[1]
-        print(fizzbuzz)
+        fizz_x_buzz = fizz_buzz[0] * fizz_buzz [1]
 
-        fizzbuzzattributes = namedtuple('FizzbuzzAttributes', ['fizz', 'buzz', 'fizzbuzz'])
-        fizzbuzz_attributes = fizzbuzzattributes(fizz=fizz_buzz[0], buzz=fizz_buzz[1], fizzbuzz=fizzbuzz)
+        fizzbuzzattributes = namedtuple('FizzbuzzAttributes', ['fizz', 'buzz', 'fizzbuzz','fizz_x_buzz'])
+        fizzbuzz_attributes = fizzbuzzattributes(fizz=fizz_buzz[0], buzz=fizz_buzz[1], fizzbuzz=fizzbuzz, fizz_x_buzz = fizz_x_buzz)
 
         print(fizzbuzz_attributes.fizzbuzz)
 
