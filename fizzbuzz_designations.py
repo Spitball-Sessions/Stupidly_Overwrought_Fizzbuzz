@@ -2,28 +2,36 @@ import random
 from collections import namedtuple
 
 class FizzBuzz:
-    def get_buzz(fizz):
-        while fizz:
+    def __init__(self, fizz, buzz, fizzbuzz, fizz_x_buzz):
+        self.fizz = fizz
+        self.buzz = buzz
+        self.fizzbuzz = fizzbuzz
+        self.fizzx = fizz_x_buzz
+
+    def get_fizzed():
+        FizzBuzz.fizz = random.randint(2, 5)
+        # FizzBuzz.get_buzzed() <- why doesn't this work?
+
+    def get_buzzed():
+        buzz = 0
+        fizz = FizzBuzz.fizz
+        while not buzz:
             buzz = random.randint(1, 10)
             if buzz <= fizz or (buzz % fizz) == 0:
                 continue
             else:
-                return buzz
+                FizzBuzz.buzz = buzz
 
-    def get_fizz():
-        fizz = random.randint(2, 5)
-        buzz = FizzBuzz.get_buzz(fizz)
-        return fizz, buzz
+    def get_fizzbuzzed():
+        FizzBuzz.fizzbuzz = (FizzBuzz.fizz + FizzBuzz.buzz)
 
 
-    def get_fizzbuzz_attributes(fizz_buzz):
-        fizzbuzz = fizz_buzz[0] + fizz_buzz[1]
-        fizz_x_buzz = fizz_buzz[0] * fizz_buzz [1]
+    def get_fizzxed():
+        FizzBuzz.fizzx = (FizzBuzz.fizz * FizzBuzz.buzz)
 
-        fizzbuzzattributes = namedtuple('FizzbuzzAttributes', ['fizz', 'buzz', 'fizzbuzz','fizz_x_buzz'])
-        fizzbuzz_attributes = fizzbuzzattributes(fizz=fizz_buzz[0], buzz=fizz_buzz[1], fizzbuzz=fizzbuzz, fizz_x_buzz = fizz_x_buzz)
-
-        print(fizzbuzz_attributes.fizzbuzz)
-
-        return fizzbuzz_attributes
-
+    @staticmethod
+    def get_fizzbuzz_attributes():
+        FizzBuzz.get_fizzed()
+        FizzBuzz.get_buzzed()
+        FizzBuzz.get_fizzbuzzed()
+        FizzBuzz.get_fizzxed()

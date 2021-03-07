@@ -1,14 +1,14 @@
 import random
 from collections import namedtuple
 from fizzbuzz_designations import FizzBuzz
-
+import calculations
 
 
 
 def  main():
-    fizzbuzz_tuple = FizzBuzz.get_fizzbuzz_attributes(FizzBuzz.get_fizz())
+    FizzBuzz.get_fizzbuzz_attributes()
+    print(f'fizz is {FizzBuzz.fizz}, buzz is {FizzBuzz.buzz}, fizzbuzz is {FizzBuzz.fizzbuzz}, fizz * buzz is {FizzBuzz.fizzx}')
 
-    print(f'fizz is {fizzbuzz_tuple.fizz}, buzz is {fizzbuzz_tuple.buzz}, fizzbuzz is {fizzbuzz_tuple.fizzbuzz}, fizz * buzz is {fizzbuzz_tuple.fizz_x_buzz}')
 
 
 
