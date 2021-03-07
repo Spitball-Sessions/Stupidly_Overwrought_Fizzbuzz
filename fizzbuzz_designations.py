@@ -15,12 +15,13 @@ class FizzBuzz:
     def get_buzzed():
         buzz = 0
         fizz = FizzBuzz.fizz
-        while not buzz:
+        while buzz < 99:
             buzz = random.randint(1, 10)
             if buzz <= fizz or (buzz % fizz) == 0:
                 continue
             else:
                 FizzBuzz.buzz = buzz
+                return
 
     def get_fizzbuzzed():
         FizzBuzz.fizzbuzz = (FizzBuzz.fizz + FizzBuzz.buzz)
