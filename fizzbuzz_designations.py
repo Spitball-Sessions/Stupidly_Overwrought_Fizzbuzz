@@ -8,27 +8,27 @@ class FizzBuzz:
         self.fizzbuzz = fizzbuzz
         self.fizzx = fizz_x_buzz
 
-    def get_fizzed():
-        FizzBuzz.fizz = random.randint(2, 5)
+    def get_fizzed(self):
+        self.fizz = random.randint(2, 5)
         # FizzBuzz.get_buzzed() <- why doesn't this work?
 
-    def get_buzzed():
+    def get_buzzed(self):
         buzz = 0
-        fizz = FizzBuzz.fizz
+        fizz = self.fizz
         while buzz < 99:
             buzz = random.randint(1, 10)
             if buzz <= fizz or (buzz % fizz) == 0:
                 continue
             else:
-                FizzBuzz.buzz = buzz
+                self.buzz = buzz
                 return
 
-    def get_fizzbuzzed():
-        FizzBuzz.fizzbuzz = (FizzBuzz.fizz + FizzBuzz.buzz)
+    def get_fizzbuzzed(self):
+        self.fizzbuzz = (self.fizz + self.buzz)
 
 
-    def get_fizzxed():
-        FizzBuzz.fizzx = (FizzBuzz.fizz * FizzBuzz.buzz)
+    def get_fizzxed(self):
+        self.fizzx = (self.fizz * self.buzz)
 
     @staticmethod
     def get_fizzbuzz_attributes():

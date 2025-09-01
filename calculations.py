@@ -10,7 +10,7 @@ class FizzBuzzList:
         self.spiteful = spiteful
 
 
-    def create_list():
+    def create_list(self):
         list = [0]
         attempt_list = []
         y = 0
@@ -25,44 +25,44 @@ class FizzBuzzList:
                 y = 0
                 list.append(x)
 
-        FizzBuzzList.numbers = list[1:]
-        FizzBuzzList.attempts = attempt_list
+        self.numbers = list[1:]
+        self.attempts = attempt_list
 
 
-    def create_fizzbuzz_list():
+    def create_fizzbuzz_list(self):
        list_length = FizzBuzz.fizzx*10
        usable_list = []
 
        for i in range(list_length):
-           if FizzBuzzList.numbers[i] % FizzBuzz.fizzbuzz == 0:
+           if self.numbers[i] % FizzBuzz.fizzbuzz == 0:
                usable_list.append("Fizzbuzz")
-           elif FizzBuzzList.numbers[i] % FizzBuzz.buzz == 0:
+           elif self.numbers[i] % FizzBuzz.buzz == 0:
                usable_list.append("Buzz")
-           elif FizzBuzzList.numbers[i] % FizzBuzz.fizz == 0:
+           elif self.numbers[i] % FizzBuzz.fizz == 0:
                usable_list.append("Fizz")
            else:
-               usable_list.append(str(FizzBuzzList.numbers[i]))
+               usable_list.append(str(self.numbers[i]))
 
-       FizzBuzzList.fizzbuzzlist = usable_list
+       self.fizzbuzzlist = usable_list
 
-    def create_attempt_list():
-        list_length = len(FizzBuzzList.attempts)
+    def create_attempt_list(self):
+        list_length = len(self.attempts)
         spite = []
 
         for i in range(list_length):
-            if FizzBuzzList.attempts[i] % FizzBuzz.fizzbuzz == 0:
+            if self.attempts[i] % FizzBuzz.fizzbuzz == 0:
                 spite.append("Fizzbuzz")
-            elif FizzBuzzList.attempts[i] % FizzBuzz.buzz == 0:
+            elif self.attempts[i] % FizzBuzz.buzz == 0:
                 spite.append("Buzz")
-            elif FizzBuzzList.attempts[i] % FizzBuzz.fizz == 0:
+            elif self.attempts[i] % FizzBuzz.fizz == 0:
                 spite.append("Fizz")
             else:
-                spite.append(FizzBuzzList.attempts[i])
+                spite.append(self.attempts[i])
 
-        FizzBuzzList.spiteful = spite
+        self.spiteful = spite
 
-    def convert_lists():
-        FizzBuzzList.create_list()
-        FizzBuzzList.create_fizzbuzz_list()
-        FizzBuzzList.create_attempt_list()
+    def convert_lists(self):
+        self.create_list(self)
+        self.create_fizzbuzz_list(self)
+        self.create_attempt_list(self)
 
